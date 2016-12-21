@@ -629,7 +629,7 @@ class Brain(object):
                     output = self.substitute(match, "person")
                 else:
                     output = utils.string_format(match, item)
-                reply = reply.replace('{{{item}}}{match}{{/{item}}}'.format(item=item, match=match), output)
+                reply = reply.replace('{{{item}}}{match}{{/{item}}}'.format(item=item, match=match), output, 1) 
 
         # Handle all variable-related tags with an iterative regex approach,
         # to allow for nesting of tags in arbitrary ways (think <set a=<get b>>)
